@@ -7,7 +7,6 @@ var path = require("path");
 var app = express();
 var PORT = process.env.PORT || 3000;
 
-app.use(express.static("app/public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -19,11 +18,11 @@ app.listen(PORT, function() {
 //HTML ROUTES
 //-----------------------------------------------------------
 app.get("/home", function(req, res) {
-  res.sendFile(path.join(__dirname, "app/public/home.html"));
+  res.sendFile(path.join(__dirname, "app/public/home.html","app/publc/css/home.css"));
 });
 
 app.get("/survey", function(req, res) {
-  res.sendFile(path.join(__dirname, "app/public/survey.html"));
+  res.sendFile(path.join(__dirname, "app/public/survey.html","app/public/css/survey.css"));
 });
 
 //API ROUTES
