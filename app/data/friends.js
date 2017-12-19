@@ -1,37 +1,12 @@
-$("#submit").on("click", function() {
-  event.preventDefault();
-
-  var newFriend = {
-    name: $("#userName").val(),
-    photo: $("#userPhoto").val(),
-    scores: [
-      $("#q1").val(),
-      $("#q2").val(),
-      $("#q3").val(),
-      $("#q4").val(),
-      $("#q5").val(),
-    ]
-  };
-
-  console.log(newFriend);
-
-  var currentURL = window.location.origin;
-
-  $.post(currentURL + "/api/friends", newFriend, function(data) {
-
-    if (data == true) {
-      //run function that shows best match
-    } else if (data == false) {
-      alert("this is false. ask what exactly is false and how this is judged")
-    }
-
-    $("#q1").val("");
-    $("#q2").val("");
-    $("#q3").val("");
-    $("#q4").val("");
-    $("#q5").val("");
-  });
-
-  return false;
-
-});
+var friends = [
+	{
+		name: 'Tom',
+		photo: 'https://www.thefamouspeople.com/profiles/images/tom-hanks-4.jpg',
+		scores: [1, 3, 2, 4, 5]
+	},
+	{
+		name: 'Scott',
+		photo: 'https://media1.popsugar-assets.com/files/thumbor/4NjIcVVSARGq-XaSkF-cr3HAcqM/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2014/04/24/816/n/1922283/2908edfc2d2b9ebc_thumb_temp_image346515061398361011/i/Meg-Ryan-Movie-Clips.jpg',
+		scores: [5, 4, 3, 2, 1]
+	}
+];

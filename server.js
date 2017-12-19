@@ -27,7 +27,7 @@ app.get("/survey", function(req, res) {
 
 //API ROUTES
 //-----------------------------------------------------------
-app.get("/api/friends", function(req, res) {
+app.get("/routing/apiRouting", function(req, res) {
 	console.log(res);
 	return res.json(friends);
 });
