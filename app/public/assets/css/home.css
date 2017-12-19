@@ -1,0 +1,10 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #AEC6DF;
+}
+
+#container {
+  margin: 15% 10% 10% 10%;
+  text-align: center;
+  background-color: #E2EDF7;
+}
