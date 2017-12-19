@@ -14,7 +14,9 @@ app.use(express.static("app/public"));
 app.listen(PORT, function() {
 	console.log("connected on port " + PORT);
 });
-
+app.get("/",function(req,res){
+    res.redirect("/home")
+    })
 //HTML ROUTES
 //-----------------------------------------------------------
 app.get("/home", function(req, res) {
@@ -27,12 +29,12 @@ app.get("/survey", function(req, res) {
 
 //API ROUTES
 //-----------------------------------------------------------
-app.get("/routing/apiRouting", function(req, res) {
+app.get("/api/friends", function(req, res) {
 	console.log(res);
 	return res.json(friends);
 });
 
-app.post("/api/new", function(req, res) {
+app.post("/api/friends", function(req, res) {
   var newFriend = req.body;
 
   console.log(newFriend);
