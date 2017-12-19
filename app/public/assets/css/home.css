@@ -1,10 +1,14 @@
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #AEC6DF;
+  background-size:cover;
 }
 
 #container {
-  margin: 15% 10% 10% 10%;
-  text-align: center;
-  background-color: #E2EDF7;
+    clear: both;
+    color: aliceblue;
+    background-color: rgba(141,225,169,0.8);
+    margin: auto;
+    margin-top:50px;
+    border-radius:25px;
+    padding:50px;
+    max-width: 60% ;  	
 }
