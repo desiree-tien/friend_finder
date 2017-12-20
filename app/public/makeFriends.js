@@ -1,3 +1,4 @@
+{/* <script type="text/javascript">
     // Chosen CSS
     var config = {
       ".chosen-select": {},
@@ -15,7 +16,9 @@
       }
     };
 
-
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    }
 
     // Capture the form inputs
     $("#submit").on("click", function(event) {
@@ -58,7 +61,6 @@
             $("#q10").val()
           ]
         };
-        $.ajaxSetup({ traditional: true });
 
         // AJAX post the data to the friends API.
         $.post("/api/friends", userData, function(data) {
@@ -75,3 +77,4 @@
         alert("Please fill out all fields before submitting!");
       }
     });
+  </script> */}
